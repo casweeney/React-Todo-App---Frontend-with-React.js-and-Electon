@@ -4,7 +4,7 @@ import AddTodo from './AddTodo';
 import TodoList from './TodoList';
 import './App.css';
 
-const API_URL = 'http://localhost:8000/api/todos';
+const API_URL = 'http://cooltechplus.com.ng/todos/api/todos';
 
 class App extends Component {
 
