@@ -36,7 +36,7 @@ class App extends Component {
     axios.post(`${API_URL}/complete`,{id: todoId})
       .then(() => {
         const todos = this.state.todos.map((todo) => {
-          if(todo.id == todoId){
+          if(todo.id === todoId){
             todo.completed = !todo.completed;
           }
 
