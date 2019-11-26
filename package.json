@@ -2,13 +2,30 @@
   "name": "todos",
   "version": "0.1.0",
   "private": true,
+  "description": "Simple Todo App by Casweeney",
+  "author": "Casweeney Ojukwu",
+  "main": "./public/electron.js",
+  "homepage": ".",
+  "build": {
+    "appId": "com.swiftapp.app",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.png"
+    },
+    "productName": "Swift Todos App",
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    }
+  },
+  "license": "MIT",
   "engines": {
     "node": "12.13.1",
     "npm": "6.13.1"
   },
-  "main": "./src/electron-entry.js",
   "dependencies": {
     "axios": "^0.19.0",
+    "electron-is-dev": "^1.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0"
@@ -19,8 +36,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron": "electron .",
-    "pack": "build --dir",
-    "dist": "build"
+    "dist": "npm run build && electron-builder"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,9 +56,5 @@
   "devDependencies": {
     "electron": "^7.1.2",
     "electron-builder": "^21.2.0"
-  },
-  "build": {
-    "appId": "casweeneytodos",
-    "extends": null
   }
 }
